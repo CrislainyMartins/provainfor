@@ -10,7 +10,7 @@
 
 <body>
 
-    <div class="comtainer">
+    <div class="container">
         <div class="row">
             <div class="col">
             <h1>cadastre-se</h1>

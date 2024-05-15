@@ -6,7 +6,7 @@ $senha= password_hash($_POST["senha"],PASSWORD_DEFAULT);
 
 
 $consulta="INSERT INTO usuario(nome,email,senha) 
-values('$nome','$email','$senha')";
+VALUES('$nome','$email','$senha')";
 //insert into=INSIRA NA TABELA, usuario=nome da tabela, ()colunas da tabela
 //values é para enviar os valores para as variaveis
 if($conexao=mysqli_query($conexao,$consulta)){//query é uma consulta, ele vai verificar a o que foi feito em conexao e consulta 
