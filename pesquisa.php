@@ -24,16 +24,18 @@
             <table class="table table-hover"><!--troca striped por hover-->
             <thead>
             <tr>
-            <th scope="col">Nome</th>
+            <th scope="col">Nome</th><!--uma coluna em php é defimida por col e linha por td-->
             <th scope="col">Email</th>
             <th scope="col">Ações</th>
             </tr>
             </thead>
 
-            <tbody>
+            <tbody><!--faz uma pesquisa das informações do banco de dados-->
 
             <?php
-            
+            //while é uma estrutura de repetição: fica um loop, uma pesquisa constante, em ciclo
+            //mysqli_fetch_assoc: é um vetor de armazenamento as variaveis encontradas por while
+
             while($linha = mysqli_fetch_assoc($dados)){
                 $id=$linha["id"];
                 $nome=$linha["nome"];
@@ -41,7 +43,7 @@
 
                 echo"<tr>
 
-                <td>$nome</td>
+                <td>$nome</td> 
                 <td>$email</td>
                 
                 <td width= 150px><a href='editarcad.php? id=$id' class='btn btn-success btn-sm'> Editar </a>
