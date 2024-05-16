@@ -29,8 +29,29 @@
             <th scope="col">Ações</th>
             </tr>
             </thead>
-      
-            </table>
+            <tbody>
+            <?php
+            while($linha = mysqli_fetch_assoc($dados)){
+                $id=$linha["id"];
+                $nome=$linha["nome"];
+                $email=$linha["email"];
+
+                echo"<tr>
+
+                <td>$nome</td>
+                <td>$email</td>
+                
+                <td width= 150px><a href='editarcad.php? id=$id' class='btn btn-success btn-sm'>Editar</a>
+                <a href=' ' class='btn btn-danger btn-sm' data-taggle='modal' data-target='#confirma'>excluir</a>
+                
+                </td>
+                </tr>";
+
+            }
+
+            ?>
+            </tbody>
+        </table>
 
                 
 
